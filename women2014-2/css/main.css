@@ -1,0 +1,146 @@
+html{overflow: hidden;}
+body{width: 100%; height: 100%;position: relative;  overflow: hidden; background:#90dae3 url(../img/38/bg.jpg) no-repeat 50% 50%; background-size:cover; color: #fff; font-family: "微软雅黑","黑体"; }
+#popHtml{}
+section{ position: absolute; width: 100%; left: 0; top:0;height: 100%;}
+.sectionIdx{}
+.sectionIdx .form{ position: absolute; left: 50%; top:17px; width: 220px; height: 95px; margin-left: -145px; background: url(../img/38/pop_tip_01.png) no-repeat 50% 50% ;background-size:217.5px auto; }
+.sectionIdx .form label{ display: block; padding:40px 0 0 20px;}
+.sectionIdx .form .txtStyle{ display: block; width: 160px;  line-height: 20px; overflow:hidden; border: none; border-radius: 5px;padding:5px 5px 5px 5px; }
+.sectionIdx .form .txtStyleActive{ border: 1px solid #f00; background: #E4A0A0;color: #fff; }
+.sectionIdx .male{ position: absolute; left: 50%; top:62px; width: 58px; height: 76px; margin-left: 75px; background: url(../img/38/pic_male_01.png) no-repeat 50% 50% ;background-size:100% 100%;}
+.sectionIdx .logo{ position: absolute; left: 0; top:120px; width: 100%; height: 74px; background: url(../img/38/logo.png) no-repeat 50% 50% ;background-size:auto 100%;}
+.time{ position: absolute; left: 50%; top:50%; width: 47px; height: 53px; margin-top: 150px; margin-left: -160px; text-align: center;  background: url(../img/38/ico_time_bg.png) no-repeat 50% 50% ;background-size:100% 100%;}
+.time label{display: block; font-size: 18px; transform:rotateZ(-14deg); -webkit-transform:rotateZ(-14deg);line-height: 42px; text-shadow: 1px 1px 0 #2F2F2F, 1px 1px 9px rgba(0, 85, 0, 0.8); }
+.sectionIdx .btn{position: absolute; left: 0%; top:50%; width: 100%; height: 100px;margin-top:0;}
+.sectionIdx .btn a{display: block;position: relative; left: 50%;width: 200px; margin-left: -100px; height: 45px; background-position:50% 50% ; background-repeat:no-repeat ;background-size:auto 39px; }
+.sectionIdx .female{position: absolute; left:50%; top:50%; width: 56px; height: 78px; margin-left: -28px;margin-top: 110px; background: url(../img/38/pic_female_01.png) no-repeat 50% 100% ;background-size:auto 100%;}
+.sectionIdx .female .props{position: absolute; left: 40px; top:25px; width: 29px; height: 24px; background: url(../img/38/props_01.png) no-repeat 50% 50% ;background-size:auto 100%;}
+/**/
+.sectionGame{ display: none;}
+/*
+.sectionGame .time{ position: absolute; left: 12px; top:50%; width: 47px; height: 53px; margin-top: 150px; text-align: center;  background: url(../img/38/ico_time_bg.png) no-repeat 50% 50% ;background-size:100% 100%;}
+.sectionGame .time label{display: block; font-size: 18px; transform:rotateZ(-14deg); -webkit-transform:rotateZ(-14deg);line-height: 42px; text-shadow: 1px 1px 0 #2F2F2F, 1px 1px 9px rgba(0, 85, 0, 0.8); }
+*/
+.sectionGame .maleName{ position: absolute; left: 9px; top:-2px; width: 72px; height: 37px; line-height: 40px; text-align: center; overflow: hidden;  background: url(../img/38/pop_tip_02.png) no-repeat 50% 50% ;background-size:auto 100%;}
+.sectionGame .male{ position: absolute; left: 100px; top:18px; width: 58px; height: 76px;  background: url(../img/38/pic_male_01.png) no-repeat 50% 50% ;background-size:auto 100%;}
+.sectionGame .maleIco{ position: absolute; left: 22px; top:12px; width: 36.5px; height: 32.5px;  background: url(../img/38/ico_01.png) no-repeat 50% 50% ;background-size:auto 100%;}
+.sectionGame .female{position: absolute; left:40px; bottom:0; width: 56px; height: 78px; background: url(../img/38/pic_female_01.png) no-repeat 50% 100% ;background-size:auto 100%;}
+.sectionGame .female b{position: absolute; left:9px; top:8px; width: 40px; height: 36px; border-radius: 50% 50% 50% 50%; overflow: hidden; }
+.sectionGame .female b img{display: block; width: 100%; height: 100%; border-radius: 50% 50% 50% 50%;}
+.sectionGame .props{position: absolute; left: 200px; top:25px; width: 30px; height: 30px; /*background: url(../img/38/props_01.png) no-repeat 50% 50% ;background-size:auto 100%; */ }
+.sectionGame .props img{ height: 100%; transform:rotateZ(0deg);-webkit-transform:rotateZ(0deg); }
+.sectionGame .props imgTrans {transform:rotateZ(90deg);-webkit-transform:rotateZ(90deg);}
+.sectionGame .intro{ display: none; position: absolute; z-index: 3; left: 0; top:0; width: 100%; height: 100%; background: url(../img/38/filter_intro.jpg) no-repeat 50% 50% ;background-size:100% auto;}
+.sectionGame .score{ display: block; position: absolute; right: 0; bottom:0; width: 50px; height: 30px;text-align: center; }
+.canvas{position: absolute; z-index: 2; left: 0;top:0; width: 100%; height: 100%; background: rgba(0,0,0,0.1);}
+.pointer{ display: none; position: absolute; z-index: 2; width: 34px; height: 51px; margin:25px 0 0 -17px; background: url(../img/38/point_active.png) no-repeat 50% 50% ;background-size:100% auto;}
+/**/
+.sectionResult{display: none;}
+.sectionResult .tips{position: absolute; left: 0; top:5px; width: 100%; height: 40px; line-height: 40px;color: #3a230a; font-size: 16px; }
+.sectionResult .tips .word{display: block; line-height: 37px; height: 37px; text-align: right; }
+.sectionResult .tips .icon{display: block;float: right; width: 50px; height: 37px; background: url(../img/38/ico_share.png) no-repeat 5% 50% ;background-size:34px auto; }
+.sectionResult .rstBox{display: none; }
+.rstBox{ background: url(../img/38/rst_bg.png) no-repeat 0% 0% ;background-size:239px auto; position: absolute; left: 50%; top:50px; width: 239px;height: 326px; margin-left: -119.5px;  }
+.rstBox .userDiv{ height:150px;position: relative; }
+.rstBox .userDiv .pPic{position: absolute; left:30px; top:80px; width: 60px; height: 60px; border-radius:5px; overflow: hidden; padding:3px; background: rgba(255,246,216,0.1); border:1px solid #e8d8a0; }
+.rstBox .userDiv .pPic label{ display: block; width: 60px; height: 60px;border-radius: 5px; overflow: hidden;  }
+.rstBox .userDiv .pPic img{ max-width: 60px; min-width: 60px; min-height: 60px; }
+.rstBox .userDiv .pName{ position: absolute; left:140px; top:90px;width: 90px; height: 30px; line-height: 30px; overflow: hidden; font-size: 16px;color: #3A230A;  }
+.rstBox .userDiv .pScore{ position: absolute; left:160px; top:122px;width: 34px;font-size: 14px; text-align: center;  color: #3A230A; }
+.rstBox .prizeDiv{ height:80px;position: relative; }
+.rstBox .prizeDiv p{padding:5px 20px; color: #3a230a; font-size: 14px; overflow-y: auto; overflow-x: hidden; }
+.rstBox .btnDiv a{display: block; height: 45px;  background-position:50% 50% ; background-repeat:no-repeat ;background-size:auto 39px; }
+/**/
+.sectionShare{  }
+.sectionShare .tips{position: absolute; left: 0; top:5px; width: 100%; height: 40px; line-height: 40px;color: #3a230a; font-size: 12px; }
+.sectionShare .tips .word{display: block;float: right;width: 246px; line-height: 37px; height: 41px; text-align: right;background: url(../img/38/tip_share_1.png) no-repeat 100% 50% ;background-size:auto 41px; }
+.sectionShare .tips .icon{display: block;float: right; width: 50px; height: 37px; background: url(../img/38/ico_share.png) no-repeat 5% 50% ;background-size:34px auto; }
+
+/**/
+.fixAd{position: fixed;z-index: 2; left: 0;width: 100%; bottom: 0; text-align:  center; display: none; }
+.fixAd .cont{max-width: 320px; margin: 0 auto; position: relative;}
+.fixAd .cont .aClose{ display: block; position: absolute; right: 0; top:0; width: 50px; height: 50px;}
+.fixAd .cont .aImg{display: block; margin: 0 auto; }
+.fixAd .cont .aImg img{display: block;  width: 100%; }
+/**/
+.sectionRanking{ z-index: 102; display: none;}
+.rankingBox{ width: 300px; height: 387px; position: absolute; left: 50%;top:50%; margin: -193.5px 0 0 -150px; background: url(../img/38/ranking_bg.png) no-repeat 50% 50% ; background-size: 293.5px auto;}
+.rankingBox .listDiv{position: absolute; left: 25px; top:65px; width: 250px; overflow-x:hidden;overflow-y: auto; height: 260px; }
+.rankingBox .listDiv .content {width: 230px; }
+.rankingBox .listDiv ul {width: 230px; margin: 0 auto; }
+.rankingBox .listDiv ul {width: 230px; margin: 0 auto; }
+.rankingBox .listDiv ul li{ clear: both; overflow: hidden;}
+.rankingBox .listDiv ul li .order{ float: left; width:35px; height: 40px; text-align: center; font-weight: 600; font-size: 14px; line-height: 46px; color: #fff;  /*background: url(../img/38/num/1.png) no-repeat 0 9px ; background-size: 30px auto; text-indent: -999px;*/ overflow: hidden;  }
+.rankingBox .listDiv ul li .image{ float: left; width: 66px; height: 50px;padding:3px 0 0 0; overflow: hidden; }
+.rankingBox .listDiv ul li .image label{ display:block; margin: 0 auto;  width: 36px;height: 41px; border-radius: 5px; overflow: hidden;  }
+.rankingBox .listDiv ul li .image img{ display:block; width: 36px; min-height: 41px;   }
+.rankingBox .listDiv ul li .name{ float: left; width: 50px; height: 50px; overflow: hidden; }
+.rankingBox .listDiv ul li .score{ float: left; width: 50px;height: 50px; overflow: hidden; }
+.rankingBox .listDiv ul li .liTop{ clear: both; overflow: hidden; position: relative; z-index: 2;  background: url(../img/38/list_bg.jpg) no-repeat 0 0 ; background-size: 100% auto; line-height: 50px; color: #3a230a; font-size: 13px;  }
+.rankingBox .listDiv ul li .liBody{display: none; clear: both; overflow: hidden; position: relative; z-index:0; width: 169px;  margin:-10px 0 0 55px; background: url(../img/38/prize_bg.jpg) no-repeat 0 0 ; background-size: 169px 100%; line-height: 50px; color: #3a230a; font-size: 13px; }
+.rankingBox .listDiv ul li .liBody p{padding:15px 5px 5px 5px; line-height: 20px;}
+.rankingBox .btnDiv{position: absolute; left: 25px; top:335px; width: 250px; height: 50px; }
+.rankingBox .btnDiv a{display: block; width: 170px; height:35px; margin: 0 auto;background: url(../img/38/btn_back.png) no-repeat 0 0 ; background-size: 100% auto;   }
+/**/
+.aWeixin{background-image: url(../img/38/btn_weixin.png); }
+.aGo{background-image: url(../img/38/btn_go.png); }
+.aRanking{background-image: url(../img/38/btn_ranking.png); }
+.aReplay{background-image: url(../img/38/btn_replay.png); }
+.aPlay{background-image: url(../img/38/btn_play.png); }
+.aRanking{background-image: url(../img/38/btn_ranking.png); }
+.aBtn{ opacity: 1;}
+.aBtn:active{ opacity: 0.7;}
+/**/
+.loadingDiv{text-align: center;padding:30px 10px; color: #000;}
+.resultFail{text-align: center;padding: 20px 0; line-height: 50px; font-size: 14px; color: #000; }
+.popScreenH{display:none;position:absolute; z-index:1000; left:0; top:0;width: 100%;height: 320px; background: url(../img/device-rotation.png) no-repeat 50% 50%;}
+/*popLoading*/
+.popLoading{ position: absolute;z-index: 200;left: 50%;top:50%;width: 300px;height: 100px;margin: -50px 0 0 -150px; text-align: center; color: #000; }
+.popLoading .cnt img{ display: block; clear: both; margin: 0 auto; padding: 10px;}
+
+
+
+/**
+ *
+ * Vertical Scrollbar
+ *
+ */
+.myScrollbarV {
+    position:absolute;
+    z-index:100;
+    width:4px;bottom:7px;top:2px;right:1px
+}
+
+.myScrollbarV > div {
+    position:absolute;
+    z-index:100;
+    width:100%;
+
+    /* The following is probably what you want to customize */
+    background:-webkit-gradient(linear, 0 0, 100% 0, from(#FCBB17), to(#B98604));
+    background-image:-moz-linear-gradient(top, #FCBB17, #B98604);
+    background-image:-o-linear-gradient(top, #FCBB17, #B98604);
+
+    border:1px solid #FCBB17;
+
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding-box;
+    -o-background-clip:padding-box;
+    background-clip:padding-box;
+
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4px;
+
+    -webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+    -moz-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+    -o-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+    box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+}
+

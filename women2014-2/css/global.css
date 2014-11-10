@@ -1,0 +1,31 @@
+@charset"utf-8";
+*{padding:0;margin:0;}
+html{border:none;overflow-x:hidden;overflow-y:auto;}
+.html{overflow:hidden;}
+form,ul,li,ol,p{margin:0;padding:0;list-style:none;display:block;vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:12px;margin:0;padding:0;display:block;}
+ul,ol,li{list-style:none;margin:0;padding:0;}
+a{outline:none;}
+a:active,a:hover,a:link,a:visited{text-decoration:none;}
+img{border:0;}
+.clr{clear:both;}
+body{font-size:12px;margin:0;padding:0;}
+td{font-size:12px;}
+.f_right{float:right;}
+a{color:#858585;cursor:pointer;}
+a:hover{color:#FCBB17;}
+.divHide{display:none;}
+.divShow{display:block;}
+.textRight{text-align:right;}
+.white{color:#fff;}
+.color_green{color:#AFD462;}
+.imgBox{display:block;}
+/**遮罩层*/
+.filterAbs{position:fixed;_position:absolute;left:0;top:0;z-index:100;background:#000;width:100%;height:100%;filter:alpha(opacity=70,style=0);-moz-opacity:0.7;opacity:0.7;}
+.loadAbs{position:absolute;z-index:999;left:50%;margin-left:-50px;top:50%;margin-top:-50px;width:100px;height:100px;}
+.htmlScroll{scrollbar-face-color:#AED562;scrollbar-highlight-color:#AED562;scrollbar-3dlight-color:#759C2A;scrollbar-darkshadow-color:#354020;scrollbar-Shadow-color:#AED562;scrollbar-arrow-color:#FFF;scrollbar-track-color:#354020;background:url(../img/link_img_03.png)no-repeat00;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='img/link_img_03.png');
+border-bottom-right-radius:5px;border-bottom-left-radius:5px;-webkit-box-shadow:2px 2px 6px #000;-moz-box-shadow:2px 2px 6px #000;}
+noscript{ display:none;}
+/*aLink*/
+.aLink { display:block; overflow:hidden; text-indent:-10000px; }
+.aLinkStyle { background:#000; filter:alpha(opacity=0); -moz-opacity:0; opacity:0; }
