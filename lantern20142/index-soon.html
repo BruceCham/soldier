@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2014 元宵节 敬请期待</title>
+    <meta name="keyword" content="digitalX|Merry christmas">
+    <meta name="description" content="Merry christmas">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--        <link rel="apple-touch-icon" href="img/pic_weixin.jpg" />
+<link rel="apple-touch-icon" sizes="57x57" href="img/pic_weixin.jpg" />
+<link rel="apple-touch-icon" sizes="72x72" href="img/pic_weixin.jpg" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/pic_weixin.jpg" />
+<link rel="apple-touch-icon" sizes="144x144" href="img/pic_weixin.jpg" />-->
+
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script>
+
+
+
+    </script>
+    <style>
+        body{ background:#040301 url(img/bg.jpg) no-repeat 50% 0%; background-size: 100% auto; color: #fff;}
+        #wrap{}
+        .timeBox{position: absolute; left:50%; top:250px ; width: 237px; height: 100px; margin-left: -118.5px; background:url(img/img_timer.png) no-repeat 50% 0%;background-size: 237px auto; }
+        .timeBox .num{ font-size: 24px; font-family: "arial"; top:20px; width: 50px; text-align: center; }
+        .timeBox .day{position: absolute; left: 60px;  }
+        .timeBox .hours{position: absolute; left: 110px;  }
+        .timeBox .min{position: absolute; left: 180px;  }
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+    <div class="timeBox" id="timeBox">
+        <p class="num day"></p>
+
+        <p class="num hours"></p>
+
+        <p class="num min"></p>
+    </div>
+
+
+</div>
+<script LANGUAGE="javascript">
+    $.getJSON("http://admin.itsabutterfly.com/2/account/user/get_service_time?jsonp=?", function (d) {
+        if (d.result == 'success') {
+            var timerID = null;
+            var timerRunning = false;
+            function showtime() {
+                //设定系统时间 为当前时间
+                Today = new Date();
+                var NowHour = Today.getHours();
+                var NowMinute = Today.getMinutes();
+                var NowMonth = Today.getMonth();
+                var NowDate = Today.getDate();
+                var NowYear = Today.getYear();
+                var NowSecond = Today.getSeconds();
+                if (NowYear <2000)
+                    NowYear=1900+NowYear;
+                Today = null;
+                Hourleft = 23 - NowHour
+                Minuteleft = 59 - NowMinute
+                Secondleft = 59 - NowSecond
+                Yearleft = 2014 - NowYear
+                Monthleft = 2 - NowMonth - 1
+                Dateleft = 14 - NowDate
+                if (Secondleft<0)
+                {
+                    Secondleft=60+Secondleft;
+                    Minuteleft=Minuteleft-1;
+                }
+                if (Minuteleft<0)
+                {
+                    Minuteleft=60+Minuteleft;
+                    Hourleft=Hourleft-1;
+                }
+                if (Hourleft<0)
+                {
+                    Hourleft=24+Hourleft;
+                    Dateleft=Dateleft-1;
+                }
+                if (Dateleft<0)
+                {
+                    Dateleft=31+Dateleft;
+                    Monthleft=Monthleft-1;
+                }
+                if (Monthleft<0)
+                {
+                    Monthleft=12+Monthleft;
+                    Yearleft=Yearleft-1;
+                }
+                Temp=Yearleft+'年, '+Monthleft+'月, '+Dateleft+'天, '+Hourleft+'小时, '+Minuteleft+'分, '+Secondleft+'秒';
+
+                //    document.form1.left.value=Temp;
+          //      console.log(Temp)
+                $("#timeBox .day").html(Dateleft);
+                $("#timeBox .hours").html(Hourleft);
+                $("#timeBox .min").html(Minuteleft);
+                timerID = setTimeout(showtime,1000);
+                timerRunning = true;
+            }
+            var timerID = null;
+            var timerRunning = false;
+            function stopclock () {
+                if(timerRunning)
+                    clearTimeout(timerID);
+                timerRunning = false;
+            }
+            function startclock () {
+                stopclock();
+                showtime();
+            }
+            startclock();
+
+        } else {
+            console.log("time json fail");
+        }
+    })
+
+    // -->
+</script>
+
+</body>
+</html>
