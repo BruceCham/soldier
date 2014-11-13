@@ -38,7 +38,7 @@ var progressFn = {
         }, 1000);
     },
     init:function () {
-        $('#ctrlBox .icoWord').unbind("click").bind("click", function () {
+        $('#ctrlBox .icoWord,#ctrlBox .icoFire').unbind("click").bind("click", function () {
 			ajaxInfoFn.setPariseFn(_prarm);
             $(".ctrlBox .icoFire").animate({left:174, bottom:80}, 500, function () {
                 $(this).fadeOut();
@@ -253,14 +253,14 @@ var ajaxInfoFn = {
 			headImg.onload = function(){
 				$(".pHeadPic img").attr("src",headImg.src);
 			}
-			$(".pName").html("上海吾世");//加载用户名
+			$(".pName").html("源远流长");//加载用户名
 			imgLoadFn.init();//图片预加载
 			$("#pVoice .long").html("35\"");//音乐时长
 			$("#ctrlBox .icoHeart").html(8);//点赞数
 			ajaxInfoFn.ajaxForTime();
 	},
 	ajaxForTime: function(){
-		showTime(0,0,25);
+		//showTime(0,0,25);
 	},
 	setPariseFn : function(id){
 
